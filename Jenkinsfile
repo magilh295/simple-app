@@ -41,9 +41,8 @@ pipeline {
 
         stage('Deploy App + Database') {
             steps {
-                bat 'docker compose version'
-                bat 'docker-compose version'
-                bat 'docker compose up -d --build'
+                bat '"C:\\ProgramData\\Docker\\cli-plugins\\docker-compose.exe" version'
+                bat '"C:\\ProgramData\\Docker\\cli-plugins\\docker-compose.exe" up -d --build'
             }
         }
 
