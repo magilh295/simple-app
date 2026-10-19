@@ -41,6 +41,8 @@ pipeline {
 
         stage('Deploy App + Database') {
             steps {
+                bat 'docker compose version'
+                bat 'docker-compose version'
                 bat 'docker compose up -d --build'
             }
         }
